@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282829"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/convertText"
+        android:layout_width="392dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center|center_horizontal"
+        android:text="@string/convert_from"
+        android:textColor="#B5B5B5"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/IN"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="64dp"
+        android:background="#7A78BC"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convertText">
+
+        <EditText
+            android:id="@+id/inputView"
+            android:layout_width="212dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:textAlignment="center"
+            android:foregroundGravity="center_vertical|center|center_horizontal"
+            android:hint="@string/_0"
+            android:inputType="numberSigned|numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#E3E3E3"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/inputOptions"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:textColor="#B8B8B8"
+            android:textSize="24sp" />
+        />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/toText"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center|center_horizontal"
+        android:text="To"
+        android:textColor="#BAB6B6"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/OUT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IN" />
+
+    <LinearLayout
+        android:id="@+id/OUT"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="176dp"
+        android:background="#7A78BC"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/outputView"
+            android:layout_width="219dp"
+            android:layout_height="100dp"
+            android:layout_gravity="start|right|left"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="64dp"
+            android:gravity="center|center_horizontal"
+            android:text="@string/_0"
+            android:textColor="#CCCCCC"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/outputOptions"
+            android:layout_width="147dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|left"
+            android:layout_marginTop="64dp"
+            android:textColor="#E8E6E6"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
